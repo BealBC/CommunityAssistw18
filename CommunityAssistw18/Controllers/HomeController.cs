@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CommunityAssistw18.Models;
 
 namespace CommunityAssistw18.Controllers
 {
@@ -10,7 +11,9 @@ namespace CommunityAssistw18.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            CommunityAssist2017Entities db = new CommunityAssist2017Entities();
+
+            return View(db.BusinessRules.ToList());
         }
 
         public ActionResult About()
