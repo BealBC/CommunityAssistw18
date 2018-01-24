@@ -13,7 +13,7 @@ namespace CommunityAssistw18.Controllers
         {
             CommunityAssist2017Entities db = new CommunityAssist2017Entities();
 
-            return View(db.BusinessRules.ToList());
+            return View(db.GrantTypes.ToList());
         }
 
         public ActionResult About()
