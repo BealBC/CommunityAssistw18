@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CommunityAssistw18.Models.Person>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Register New Person</h2>
+<p>@Html.ActionLink("Register", "Register")</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.PersonFirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.PersonLastName)</th>
+        <th>@Html.DisplayNameFor(model => model.PersonEmail)</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(model => item.PersonFirstName)</td>
+        <td>@Html.DisplayFor(model => item.PersonLasttName)</td>
+        <td>@Html.DisplayFor(model => item.PersonEmail)</td>
+
+    </tr>
+    }
+</table>
