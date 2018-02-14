@@ -13,7 +13,7 @@ namespace CommunityAssistw18.Controllers
         // GET: Registration
         public ActionResult Index()
         {
-            return View();
+            return View(db.People.ToList());
         }
         public ActionResult Register()
         {
